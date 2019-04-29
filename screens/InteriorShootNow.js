@@ -47,7 +47,7 @@ selectedRoom = () => {
 currentlyShooting = () => {}
 
 
-export default class ShootOptions extends React.Component {
+export default class InteriorShootNow extends React.Component {
 
     
     onPress = data => this.setState({ 
@@ -111,7 +111,7 @@ export default class ShootOptions extends React.Component {
                         <TouchableHighlight
                         underlayColor={"#DBDBDB"}
                         onPress={() => {setState.Room="Exterior Front"}}>
-                        <Text>Exterior</Text>
+                        <Text>Great Room</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
                         className="table buttons" >
@@ -120,7 +120,7 @@ export default class ShootOptions extends React.Component {
                     </ChooseRoomView>
                     <ChooseRoomView>
                         <TouchableHighlight>
-                        <Text>Exterior Rear</Text>
+                        <Text>Kitchen</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
                         className="table buttons" >
@@ -129,7 +129,7 @@ export default class ShootOptions extends React.Component {
                     </ChooseRoomView>
                     <ChooseRoomView>
                         <TouchableHighlight>
-                        <Text>Driveway</Text>
+                        <Text>Master Bedroom</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
                         className="table buttons" >
@@ -138,7 +138,7 @@ export default class ShootOptions extends React.Component {
                     </ChooseRoomView>
                     <ChooseRoomView>
                         <TouchableHighlight>
-                        <Text>Pool</Text>
+                        <Text>Master Bathroom</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
                         className="table buttons" >
@@ -147,7 +147,7 @@ export default class ShootOptions extends React.Component {
                     </ChooseRoomView>
                     <ChooseRoomView>
                         <TouchableHighlight>
-                        <Text>Deck</Text>
+                        <Text>Family Room</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
                         className="table buttons" >
@@ -156,7 +156,7 @@ export default class ShootOptions extends React.Component {
                     </ChooseRoomView>
                     <ChooseRoomView>
                         <TouchableHighlight>
-                        <Text>Patio</Text>
+                        <Text>Dining Room</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
                         className="table buttons" >
@@ -165,7 +165,7 @@ export default class ShootOptions extends React.Component {
                     </ChooseRoomView>
                     <ChooseRoomView>
                         <TouchableHighlight>
-                        <Text>Hot Tub</Text>
+                        <Text>Office</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
                         className="table buttons" >
@@ -174,7 +174,52 @@ export default class ShootOptions extends React.Component {
                     </ChooseRoomView>
                     <ChooseRoomView>
                         <TouchableHighlight>
-                        <Text>Garage</Text>
+                        <Text>Bedroom One</Text>
+                        </TouchableHighlight>
+                        <TouchableHighlight
+                        className="table buttons" >
+                        <Image title="Go to" source={require('../assets/images/ShootOptions/ArrowRightSmall.png')} style={{backgroundColor: "#727C8e", height: 20, width: 20, borderRadius: 10}}/>
+                        </TouchableHighlight>
+                    </ChooseRoomView>
+                    <ChooseRoomView>
+                        <TouchableHighlight>
+                        <Text>Bedroom Two</Text>
+                        </TouchableHighlight>
+                        <TouchableHighlight
+                        className="table buttons" >
+                        <Image title="Go to" source={require('../assets/images/ShootOptions/ArrowRightSmall.png')} style={{backgroundColor: "#727C8e", height: 20, width: 20, borderRadius: 10}}/>
+                        </TouchableHighlight>
+                    </ChooseRoomView>
+                    <ChooseRoomView>
+                        <TouchableHighlight>
+                        <Text>Bedroom Three</Text>
+                        </TouchableHighlight>
+                        <TouchableHighlight
+                        className="table buttons" >
+                        <Image title="Go to" source={require('../assets/images/ShootOptions/ArrowRightSmall.png')} style={{backgroundColor: "#727C8e", height: 20, width: 20, borderRadius: 10}}/>
+                        </TouchableHighlight>
+                    </ChooseRoomView>
+                    <ChooseRoomView>
+                        <TouchableHighlight>
+                        <Text>Bedroom Four</Text>
+                        </TouchableHighlight>
+                        <TouchableHighlight
+                        className="table buttons" >
+                        <Image title="Go to" source={require('../assets/images/ShootOptions/ArrowRightSmall.png')} style={{backgroundColor: "#727C8e", height: 20, width: 20, borderRadius: 10}}/>
+                        </TouchableHighlight>
+                    </ChooseRoomView>
+                    <ChooseRoomView>
+                        <TouchableHighlight>
+                        <Text>Bathroom One</Text>
+                        </TouchableHighlight>
+                        <TouchableHighlight
+                        className="table buttons" >
+                        <Image title="Go to" source={require('../assets/images/ShootOptions/ArrowRightSmall.png')} style={{backgroundColor: "#727C8e", height: 20, width: 20, borderRadius: 10}}/>
+                        </TouchableHighlight>
+                    </ChooseRoomView>
+                    <ChooseRoomView>
+                        <TouchableHighlight>
+                        <Text>Bathroom Two</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
                         className="table buttons" >
