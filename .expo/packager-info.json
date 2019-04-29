@@ -1,10 +1,10 @@
 {
-  "packagerPort": 19001,
-  "packagerPid": 20416,
+  "packagerPort": null,
+  "packagerPid": null,
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "expoServerNgrokUrl": "https://qc-tt2.anonymous.photo-app.exp.direct",
-  "packagerNgrokUrl": "https://packager.qc-tt2.anonymous.photo-app.exp.direct",
-  "ngrokPid": 1924,
+  "expoServerPort": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
   "webpackServerPort": null
 }
