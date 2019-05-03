@@ -41,18 +41,40 @@ alignItems: center`;
 
 
 
-selectedRoom = () => {
-} 
-
-currentlyShooting = () => {}
 
 
 export default class ShootOptions extends React.Component {
 
     
-    onPress = data => this.setState({ 
-        Room: ''
-     });
+    
+        constructor(props) {
+            super(props)
+        this.state= {
+            currentRoom : "",
+            data: [
+            "Exterior",
+            "Exterior Rear",
+            "Driveway",
+            "Pool",
+            "Deck",
+            "Patio",
+            "Hot Tub",
+            "Garage",
+        ],
+        }
+    }
+        
+        
+        handlePressIn = (index) => {
+            
+            this.setState(this.state.currentRoom = [this.state.data[index]])  
+             }
+
+    // onPress = (e) => {
+    //     this.setState({
+    //         currentRoom : this.state.data[0]
+    //     })
+    // }
 
     static navigationOptions = {
         title: 'Shoot Options',
@@ -105,13 +127,14 @@ export default class ShootOptions extends React.Component {
                 <MenuView>
                     
                      <TableView style={{ flex: 1,  alignSelf: "stretch" }}>
-                    <Text style={{padding: 10}}>Currently Shooting: {this.setState.Room}</Text>
+                    <Text style={{padding: 10}}>Currently Shooting: {this.state.currentRoom}</Text>
 
 	                <ChooseRoomView>
                         <TouchableHighlight
                         underlayColor={"#DBDBDB"}
-                        onPress={() => {setState.Room="Exterior Front"}}>
-                        <Text>Exterior</Text>
+                        value="Exterior"
+                        onPressIn={() => this.handlePressIn(0)}>
+                        <Text> Exterior</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
                         className="table buttons" >
@@ -119,7 +142,10 @@ export default class ShootOptions extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        value="Exterior"
+                        onPressIn={() => this.handlePressIn(1)}>
                         <Text>Exterior Rear</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -128,7 +154,10 @@ export default class ShootOptions extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        value="Exterior"
+                        onPressIn={() => this.handlePressIn(2)}>
                         <Text>Driveway</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -137,7 +166,10 @@ export default class ShootOptions extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        value="Exterior"
+                        onPressIn={() => this.handlePressIn(3)}>
                         <Text>Pool</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -146,7 +178,10 @@ export default class ShootOptions extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        value="Exterior"
+                        onPressIn={() => this.handlePressIn(4)}>
                         <Text>Deck</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -155,7 +190,10 @@ export default class ShootOptions extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        value="Exterior"
+                        onPressIn={() => this.handlePressIn(5)}>
                         <Text>Patio</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -164,7 +202,10 @@ export default class ShootOptions extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        value="Exterior"
+                        onPressIn={() => this.handlePressIn(6)}>
                         <Text>Hot Tub</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -173,7 +214,10 @@ export default class ShootOptions extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        value="Exterior"
+                        onPressIn={() => this.handlePressIn(7)}>
                         <Text>Garage</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
