@@ -59,14 +59,17 @@ export default class InteriorShootNow extends React.Component {
     };
 
     render () {
-       
+       const { navigate } = this.props.navigation;
+
         return (
             <TotalPageView>
                 
                 <ButtonsView style={{}}>
                     <ButtonView>
                         <TouchableHighlight
-                        // onPress={() =>()}
+                        onPress={() =>
+                            navigate("ShootNow")
+                          }
                         className="home-screen buttons" buttonStyle={{ height: 50, width: 50, borderRadius: 25 }}>
                         <Image title="Exterior" source={require('../assets/images/ShootOptions/Exterior2.png')} style={{backgroundColor: "#666666", height: 50, width: 50, borderRadius: 25}}/>
 

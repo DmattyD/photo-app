@@ -13,6 +13,8 @@ import ShootOptions from './ShootOptions';
 // const screenWidth = Dimensions.get('window').width;
 
 const MainNavigator = createStackNavigator({
+  // Login: LoginScreen,
+  
   Settings: SettingsScreen,
   ShootNow: ShootOptions,
 

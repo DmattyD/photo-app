@@ -2,7 +2,7 @@ import React from 'react'
 import { Image, Button,  ScrollView, StyleSheet, Text, TouchableHighlight, View, Dimensions } from 'react-native';
 import {  createAppContainer, Navigation, createStackNavigator } from 'react-navigation';
 
-
+import InteriorShootNow from './InteriorShootNow';
 import styled from 'styled-components/native';
 
 import SettingsScreen from './SettingsScreen';
@@ -40,7 +40,10 @@ justifyContent: space-between
 alignItems: center`;
 
 
-
+const MainNavigator = createStackNavigator({
+    InteriorShootNow: InteriorShootNow,
+})
+export const App = createAppContainer(MainNavigator);
 
 
 export default class ShootOptions extends React.Component {
@@ -81,7 +84,7 @@ export default class ShootOptions extends React.Component {
     };
 
     render () {
-       
+       const { navigate } = this.props.navigation;
         return (
             <TotalPageView>
                 
@@ -97,7 +100,9 @@ export default class ShootOptions extends React.Component {
                     </ButtonView>
                     <ButtonView>
                         <TouchableHighlight
-                        // onPress={() =>()}
+                        onPress={() =>
+                            navigate("InteriorShoot")
+                          }
                         className="home-screen buttons" buttonStyle={{ height: 50, width: 50, borderRadius: 25 }}>
                         <Image title="Interior" source={require('../assets/images/ShootOptions/armchair.png')} style={{backgroundColor: "#FFF84E", height: 50, width: 50, borderRadius: 25}}/>
 
