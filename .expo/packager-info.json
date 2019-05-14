@@ -1,10 +1,9 @@
 {
-  "packagerPort": null,
-  "packagerPid": null,
   "devToolsPort": 19002,
-  "expoServerPort": null,
-  "expoServerNgrokUrl": null,
-  "packagerNgrokUrl": null,
-  "ngrokPid": null,
-  "webpackServerPort": null
+  "expoServerPort": 19000,
+  "packagerPort": 19001,
+  "packagerPid": 24292,
+  "expoServerNgrokUrl": "https://76-36g.anonymous.photo-app.exp.direct",
+  "packagerNgrokUrl": "https://packager.76-36g.anonymous.photo-app.exp.direct",
+  "ngrokPid": 24392
 }
