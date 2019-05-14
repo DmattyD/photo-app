@@ -48,18 +48,35 @@ currentlyShooting = () => {}
 
 
 export default class MiscShootNow extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            currentRoom: "",
+            data: [
+                "Barn",
+                "Shed",
+                "Water Feature",
+                "Guest House",
+                "Wine Cellar",
+                "Gym",
+                "Tennis Court",
+                "Basketball Court",
+                "Game Room"
+            ]
+        }
+    }
 
     
-    onPress = data => this.setState({ 
-        Room: ''
-     });
+    handlePressIn = (index) => {
+        this.setState(this.state.currentRoom = [this.state.data[index]])
+    }
 
     static navigationOptions = {
         title: 'Shoot Options',
     };
 
     render () {
-       
+       const { navigate } = this.props.navigation;
         return (
             <TotalPageView>
                 
@@ -75,7 +92,9 @@ export default class MiscShootNow extends React.Component {
                     </ButtonView>
                     <ButtonView>
                         <TouchableHighlight
-                        // onPress={() =>()}
+                        onPress={() =>
+                            navigate("InteriorShoot")
+                          }
                         className="home-screen buttons" buttonStyle={{ height: 50, width: 50, borderRadius: 25 }}>
                         <Image title="Interior" source={require('../assets/images/ShootOptions/armchair.png')} style={{backgroundColor: "#FFF84E", height: 50, width: 50, borderRadius: 25}}/>
 
@@ -105,12 +124,12 @@ export default class MiscShootNow extends React.Component {
                 <MenuView>
                     
                      <TableView style={{ flex: 1,  alignSelf: "stretch" }}>
-                    <Text style={{padding: 10}}>Currently Shooting: {this.setState.Room}</Text>
+                    <Text style={{padding: 10}}>Currently Shooting: {this.state.currentRoom}</Text>
 
 	                <ChooseRoomView>
                         <TouchableHighlight
                         underlayColor={"#DBDBDB"}
-                        onPress={() => {setState.Room="Exterior Front"}}>
+                        onPressIn={() => this.handlePressIn(0)}>
                         <Text>Barn</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -119,7 +138,9 @@ export default class MiscShootNow extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        onPressIn={() => this.handlePressIn(1)}>
                         <Text>Shed</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -128,7 +149,9 @@ export default class MiscShootNow extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        onPressIn={() => this.handlePressIn(2)}>
                         <Text>Water Feature</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -137,7 +160,9 @@ export default class MiscShootNow extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        onPressIn={() => this.handlePressIn(3)}>
                         <Text>Guest House</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -146,7 +171,9 @@ export default class MiscShootNow extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        onPressIn={() => this.handlePressIn(4)}>
                         <Text>Wine Cellar</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -155,7 +182,9 @@ export default class MiscShootNow extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        onPressIn={() => this.handlePressIn(5)}>
                         <Text>Gym</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -164,7 +193,9 @@ export default class MiscShootNow extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        onPressIn={() => this.handlePressIn(6)}>
                         <Text>Tennis Court</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -173,7 +204,9 @@ export default class MiscShootNow extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        onPressIn={() => this.handlePressIn(7)}>
                         <Text>Basketball Court</Text>
                         </TouchableHighlight>
                         <TouchableHighlight
@@ -182,7 +215,9 @@ export default class MiscShootNow extends React.Component {
                         </TouchableHighlight>
                     </ChooseRoomView>
                     <ChooseRoomView>
-                        <TouchableHighlight>
+                        <TouchableHighlight
+                        underlayColor={"#DBDBDB"}
+                        onPressIn={() => this.handlePressIn(8)}>
                         <Text>Game Room</Text>
                         </TouchableHighlight>
                         <TouchableHighlight

@@ -4,7 +4,7 @@ import {  createAppContainer, Navigation, createStackNavigator } from 'react-nav
 
 import InteriorShootNow from './InteriorShootNow';
 import styled from 'styled-components/native';
-
+import MiscShootNow from './MiscShootNow'
 import SettingsScreen from './SettingsScreen';
 import HomeScreen from './HomeScreen';
 
@@ -42,6 +42,7 @@ alignItems: center`;
 
 const MainNavigator = createStackNavigator({
     InteriorShootNow: InteriorShootNow,
+    MiscShoot: MiscShootNow
 })
 export const App = createAppContainer(MainNavigator);
 
@@ -111,7 +112,9 @@ export default class ShootOptions extends React.Component {
                     </ButtonView>
                     <ButtonView>
                         <TouchableHighlight
-                        // onPress={() =>()}
+                        onPress={() =>
+                            navigate("MiscShoot")
+                          }
                         className="home-screen buttons" buttonStyle={{ height: 50, width: 50, borderRadius: 25 }}>
                         <Image title="Misc" source={require('../assets/images/ShootOptions/Misc-Benefits-Icon.png')} />
                         </TouchableHighlight>
