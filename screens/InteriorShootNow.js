@@ -101,7 +101,6 @@ export default class InteriorShootNow extends React.Component {
                     </ButtonView>
                     <ButtonView>
                         <TouchableHighlight
-                        // onPress={() =>()}
                         className="home-screen buttons" buttonStyle={{ height: 50, width: 50, borderRadius: 25 }}>
                         <Image title="Interior" source={require('../assets/images/ShootOptions/armchair.png')} style={{backgroundColor: "#FFF84E", height: 50, width: 50, borderRadius: 25}}/>
 
@@ -120,7 +119,9 @@ export default class InteriorShootNow extends React.Component {
                     </ButtonView>
                     <ButtonView>
                         <TouchableHighlight
-                        // onPress={() =>()}
+                        onPress={() =>
+                            navigate("CustomShootScreen")
+                          }
                         className="home-screen buttons" buttonStyle={{ height: 50, width: 50, borderRadius: 25 }}>
                         <Image title="Custom" source={require('../assets/images/ShootOptions/story.png')} style={{background: "#AEADAF"}}/>
 

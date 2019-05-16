@@ -13,6 +13,7 @@ import ShootOptions from '../screens/ShootOptions';
 import ImagePreview from '../screens/ImagePreview'
 import InteriorShootNow from '../screens/InteriorShootNow';
 import MiscShootNow from '../screens/MiscShootNow';
+import CustomShootScreen from '../screens/CustomShootScreen';
 
 
 
@@ -68,6 +69,7 @@ const ShootOptionsStack = createStackNavigator({
   ShootNow: ShootOptions,
   InteriorShoot: InteriorShootNow,
   MiscShoot: MiscShootNow,
+  CustomShootScreen: CustomShootScreen,
 });
 
 ShootOptionsStack.navigationOptions = {

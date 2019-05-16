@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Button,  ScrollView, StyleSheet, Text, TouchableHighlight, View, Dimensions } from 'react-native';
+import { Image, Button,  ScrollView, StyleSheet, Text, TouchableHighlight, View, Dimensions, TextInput } from 'react-native';
 import {  createAppContainer, Navigation, createStackNavigator } from 'react-navigation';
 
 
@@ -83,12 +83,14 @@ export default class MiscShootNow extends React.Component {
                 <ButtonsView style={{}}>
                     <ButtonView>
                         <TouchableHighlight
-                        // onPress={() =>()}
+                        onPress={() =>
+                            navigate("ShootNow")
+                          }
                         className="home-screen buttons" buttonStyle={{ height: 50, width: 50, borderRadius: 25 }}>
                         <Image title="Exterior" source={require('../assets/images/ShootOptions/Exterior2.png')} style={{backgroundColor: "#666666", height: 50, width: 50, borderRadius: 25}}/>
 
                         </TouchableHighlight>
-                        <Text>Guest</Text>
+                        <Text>Exterior</Text>
                     </ButtonView>
                     <ButtonView>
                         <TouchableHighlight
@@ -103,7 +105,7 @@ export default class MiscShootNow extends React.Component {
                     </ButtonView>
                     <ButtonView>
                         <TouchableHighlight
-                        // onPress={() =>()}
+                        
                         className="home-screen buttons" buttonStyle={{ height: 50, width: 50, borderRadius: 25 }}>
                         <Image title="Misc" source={require('../assets/images/ShootOptions/Misc-Benefits-Icon.png')} />
                         </TouchableHighlight>
@@ -111,7 +113,9 @@ export default class MiscShootNow extends React.Component {
                     </ButtonView>
                     <ButtonView>
                         <TouchableHighlight
-                        // onPress={() =>()}
+                       onPress={() =>
+                        navigate("CustomShootScreen")
+                      }
                         className="home-screen buttons" buttonStyle={{ height: 50, width: 50, borderRadius: 25 }}>
                         <Image title="Custom" source={require('../assets/images/ShootOptions/story.png')} style={{background: "#AEADAF"}}/>
 

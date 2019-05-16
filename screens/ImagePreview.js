@@ -57,7 +57,9 @@ export default class ImagePreview extends Component {
 
   static navigationOptions = ({ navigation }) => {
     return {
-      title: "Name of shoot"
+     
+      title: "",
+      
     };
   };
 
@@ -210,7 +212,8 @@ export default class ImagePreview extends Component {
               width: "95%",
             }}
           >
-
+          <TextInput placeholder="Notes">
+          </TextInput>
               </View>
 
         </NotesView>

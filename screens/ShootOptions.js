@@ -7,6 +7,7 @@ import styled from 'styled-components/native';
 import MiscShootNow from './MiscShootNow'
 import SettingsScreen from './SettingsScreen';
 import HomeScreen from './HomeScreen';
+import CustomShootScreen from './SettingsScreen';
 
 const TotalPageView = styled.View`
 flexDirection: row`;
@@ -42,7 +43,8 @@ alignItems: center`;
 
 const MainNavigator = createStackNavigator({
     InteriorShootNow: InteriorShootNow,
-    MiscShoot: MiscShootNow
+    MiscShoot: MiscShootNow,
+    CustomShootScreen: CustomShootScreen,
 })
 export const App = createAppContainer(MainNavigator);
 
@@ -74,11 +76,7 @@ export default class ShootOptions extends React.Component {
             this.setState(this.state.currentRoom = [this.state.data[index]])  
              }
 
-    // onPress = (e) => {
-    //     this.setState({
-    //         currentRoom : this.state.data[0]
-    //     })
-    // }
+   
 
     static navigationOptions = {
         title: 'Shoot Options',
@@ -122,7 +120,9 @@ export default class ShootOptions extends React.Component {
                     </ButtonView>
                     <ButtonView>
                         <TouchableHighlight
-                        // onPress={() =>()}
+                        onPress={() =>
+                            navigate("CustomShootScreen")
+                          }
                         className="home-screen buttons" buttonStyle={{ height: 50, width: 50, borderRadius: 25 }}>
                         <Image title="Custom" source={require('../assets/images/ShootOptions/story.png')} style={{background: "#AEADAF"}}/>
 
